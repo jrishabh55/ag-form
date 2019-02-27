@@ -3,4 +3,23 @@
 body {
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
+  background: #fafafa;
+  color: #0288d1;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 32px;
+
+  > span.smalls {
+    display: block;
+    clear: both;
+    margin-left: auto;
+    font-size: 60%;
+    text-align: right;
+  }
+}
+
+.red {
+  color: #f44336;
 }
