@@ -2,16 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  MatSelectModule,
+  MatInputModule,
   MatFormFieldModule,
+  MatSelectModule,
   MatOptionModule,
-  MatFormFieldControl,
 } from '@angular/material';
 
 const materialComponentModules = [
+  MatFormFieldModule,
+  MatInputModule,
   MatSelectModule,
   MatOptionModule,
-  MatFormFieldModule,
 ];
 
 
