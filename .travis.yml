@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - "9"
+dist: trusty
+sudo: false
+
+branches:
+  only:
+  - master
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install -g yarn
+
+script:
+  - yarn build --base-href /ag-form/
+  - mv dist/auxiliumgroup/index.html dist/auxiliumgroup/404.html
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/auxiliumgroup
+  on:
+    branch: master
