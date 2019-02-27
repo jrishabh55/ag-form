@@ -19,6 +19,7 @@ before_script: # commands to run before the build step
    - npm install -g --silent @angular/cli
 
 script:
+  - yarn
   - yarn lint
   - yarn build --prod --base-href /ag-form/
   - mv dist/auxiliumgroup/index.html dist/auxiliumgroup/404.html
