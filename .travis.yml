@@ -16,7 +16,8 @@ install:
   - npm install -g yarn
 
 script:
-  - yarn build --base-href /ag-form/
+  - yarn lint
+  - yarn build --prod --base-href /ag-form/
   - mv dist/auxiliumgroup/index.html dist/auxiliumgroup/404.html
 deploy:
   provider: pages
