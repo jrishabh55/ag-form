@@ -7,6 +7,7 @@ import {
   MatSelectModule,
   MatOptionModule,
   MatDividerModule,
+  MatStepperModule,
 } from '@angular/material';
 
 const materialComponentModules = [
@@ -15,6 +16,7 @@ const materialComponentModules = [
   MatSelectModule,
   MatOptionModule,
   MatDividerModule,
+  MatStepperModule
 ];
 
 
@@ -24,7 +26,7 @@ const materialComponentModules = [
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    // ...materialComponentModules
+    ...materialComponentModules
   ]
 })
 export class MaterialModule { }
