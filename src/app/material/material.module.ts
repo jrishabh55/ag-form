@@ -8,6 +8,7 @@ import {
   MatOptionModule,
   MatDividerModule,
   MatStepperModule,
+  MatGridListModule,
 } from '@angular/material';
 
 const materialComponentModules = [
@@ -16,7 +17,8 @@ const materialComponentModules = [
   MatSelectModule,
   MatOptionModule,
   MatDividerModule,
-  MatStepperModule
+  MatStepperModule,
+  MatGridListModule,
 ];
 
 

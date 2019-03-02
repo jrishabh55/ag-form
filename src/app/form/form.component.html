@@ -1,0 +1,71 @@
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="stepOneFromGroup">
+    <form [formGroup]="stepOneFromGroup">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+
+      <mat-grid-list cols="6" [rowHeight]="rowHeight">
+        <mat-grid-tile>
+          <mat-form-field>
+            <input matInput placeholder="First name" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <input matInput placeholder="Last name" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="4" [rowHeight]="rowHeight">
+        <mat-grid-tile>
+          <mat-form-field>
+            <input matInput placeholder="First name" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <input matInput placeholder="Last name" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+      <div>
+        <button mat-raised-button color="accent">Accent</button>
+        <button mat-raised-button color="primary" matStepperNext>Nextss</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="stepTwoFormGroup">
+    <form [formGroup]="stepTwoFormGroup">
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
